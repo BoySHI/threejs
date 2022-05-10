@@ -1,18 +1,35 @@
+<!--
+ * @Description: 
+ * @Author: shiby
+ * @Date: 2022-05-07 16:25:07
+ * @LastEditTime: 2022-05-10 09:53:02
+ * @LastEditors: shiby
+ * @Reference: 
+-->
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="scene">
+    <button @click="increase">增加{{count}}</button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+
+  },
+  data () {
+    return {
+      count: 1
+    }
+  },
+  methods: {
+    increase () {
+      // this.count++
+      this.$store.commit('add', this.count)
+    }
   }
 }
 </script>
