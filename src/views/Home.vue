@@ -2,14 +2,14 @@
  * @Description: 
  * @Author: shiby
  * @Date: 2022-05-07 16:25:07
- * @LastEditTime: 2022-05-11 14:07:21
+ * @LastEditTime: 2022-05-11 14:20:07
  * @LastEditors: shiby
  * @Reference: 
 -->
 <template>
   <div class="scene">
-    <button @click="increase">增加{{count}}</button>
-    <button @click="uncrease">减少{{count}}</button>
+    <button @click="increase">防抖函数-增加{{count}}</button>
+    <button @click="uncrease">防抖函数-减少{{count}}</button>
     <!-- 稍微修改下 -->
   </div>
 </template>
